@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Postulación Staff — Valladolid RP</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b0d12;color:#f1f3f7;font-family:Arial,sans-serif}
+.wrap{max-width:850px;margin:auto;padding:28px 18px 50px}.hero{background:linear-gradient(135deg,#171a25,#242033);border:1px solid #34384a;border-radius:20px;padding:30px;margin-bottom:20px}
+h1{margin:0 0 8px;font-size:32px}.hero p{color:#b9becb;margin:0;line-height:1.5}.progress{display:flex;gap:7px;margin:18px 0}.dot{height:7px;flex:1;border-radius:20px;background:#2c3040}.dot.active{background:#7c5cff}
+.page{display:none;background:#151821;border:1px solid #2b3040;border-radius:18px;padding:25px}.page.active{display:block}
+.page-title{display:flex;gap:14px;align-items:center;margin-bottom:18px}.page-title span{width:45px;height:45px;display:grid;place-items:center;border-radius:12px;background:#7c5cff;font-weight:800}
+h2{margin:0 0 3px}.page-title p,.note{margin:0;color:#9ea5b5;font-size:14px}.field{margin:18px 0}label{display:block;font-weight:700;margin-bottom:8px}
+input,textarea{width:100%;border:1px solid #363c4d;background:#0e1118;color:#fff;border-radius:11px;padding:13px;font-size:15px;outline:none}input:focus,textarea:focus{border-color:#7c5cff}textarea{resize:vertical;min-height:110px}
+.buttons{display:flex;justify-content:space-between;gap:12px;margin-top:25px}button{border:0;border-radius:11px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:15px}button:disabled{opacity:.35;cursor:not-allowed}.primary{background:#7c5cff;color:#fff}.secondary{background:#292e3b;color:#fff}
+.warning{background:#32171b;border:1px solid #b83b49;border-radius:12px;padding:17px;margin-bottom:18px}.warning h3{margin:0 0 10px;color:#ff7d89}.warning p{margin:7px 0;line-height:1.45}.check{display:flex;gap:9px;align-items:flex-start;background:#202431;padding:13px;border-radius:10px}.check input{width:auto;margin-top:3px}
+.done{text-align:center;padding:35px 10px}.done .big{font-size:50px}.small{color:#aeb4c2;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero"><h1>📋 Postulaciones Staff — Valladolid RP</h1><p>Las postulaciones están abiertas. Completa las 8 páginas con calma y responde con tus propias palabras.</p></div>
+<div class="progress" id="progress">
+<div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+</div>
+<main id="form">
+<section class="page active" data-page="1"><div class="page-title"><span>01</span><div><h2>Información básica</h2><p>Página 1 de 8</p></div></div>
+<div class="field"><label>Usuario de Discord *</label><input required></div><div class="field"><label>Edad *</label><input type="number" required></div><div class="field"><label>¿Cuánto tiempo llevas en Valladolid RP? *</label><input required></div>
+<div class="buttons"><button class="secondary" disabled>← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="2"><div class="page-title"><span>02</span><div><h2>Experiencia</h2><p>Página 2 de 8</p></div></div>
+<div class="field"><label>¿Has sido Staff anteriormente? Explica tu experiencia. *</label><textarea required></textarea></div><div class="field"><label>¿Qué tareas de moderación sabes realizar? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="3"><div class="page-title"><span>03</span><div><h2>Motivación</h2><p>Página 3 de 8</p></div></div>
+<div class="field"><label>¿Por qué quieres formar parte del Staff? *</label><textarea required></textarea></div><div class="field"><label>¿Qué cualidades aportarías al equipo? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="4"><div class="page-title"><span>04</span><div><h2>Disponibilidad</h2><p>Página 4 de 8</p></div></div>
+<div class="field"><label>¿Cuánto tiempo puedes dedicar al servidor? *</label><input required></div><div class="field"><label>¿En qué horarios sueles estar disponible? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="5"><div class="page-title"><span>05</span><div><h2>Situaciones de moderación</h2><p>Página 5 de 8</p></div></div>
+<div class="field"><label>Dos usuarios empiezan una discusión. ¿Qué harías? *</label><textarea required></textarea></div><div class="field"><label>Un amigo tuyo rompe una norma. ¿Cómo actuarías? *</label><textarea required></textarea></div><div class="field"><label>Un usuario insulta a un miembro del Staff. ¿Qué harías? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="6"><div class="page-title"><span>06</span><div><h2>Imparcialidad</h2><p>Página 6 de 8</p></div></div>
+<div class="field"><label>¿Cómo demostrarías que puedes ser imparcial? *</label><textarea required></textarea></div><div class="field"><label>¿Qué harías si otro Staff abusa de sus permisos? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="7"><div class="page-title"><span>07</span><div><h2>Trabajo en equipo</h2><p>Página 7 de 8</p></div></div>
+<div class="field"><label>¿Cómo trabajarías con otros miembros del Staff? *</label><textarea required></textarea></div><div class="field"><label>¿Qué harías si no estás de acuerdo con una decisión del equipo? *</label><textarea required></textarea></div>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="next()">Siguiente →</button></div></section>
+
+<section class="page" data-page="8"><div class="page-title"><span>08</span><div><h2>Finalización</h2><p>Página 8 de 8</p></div></div>
+<div class="warning"><h3>⚠️ IMPORTANTE ANTES DE FINALIZAR</h3><p>Responde con calma y tómate tu tiempo.</p><p><b>🚫 NO UTILICES CHATGPT, GEMINI, CLAUDE NI NINGUNA OTRA IA.</b></p><p>Tampoco copies respuestas de Internet ni de otras personas. Queremos conocer tus propias ideas y tu forma de expresarte.</p></div>
+<div class="field"><label>¿Hay algo más que quieras añadir sobre ti?</label><textarea></textarea></div>
+<label class="check"><input id="confirm" type="checkbox"> Confirmo que he respondido con mis propias palabras y que la información es verdadera.</label>
+<div class="buttons"><button class="secondary" onclick="prev()">← Atrás</button><button class="primary" onclick="finish()">Finalizar postulación ✓</button></div></section>
+</main>
+<section class="page" id="success"><div class="done"><div class="big">✅</div><h2>¡Postulación completada!</h2><p class="small">La navegación de las 8 páginas funciona correctamente. Esta versión es una página local: para enviar automáticamente las respuestas a Discord habría que conectarla a un servidor o webhook.</p><button class="primary" onclick="location.reload()">Volver a empezar</button></div></section>
+</div>
+<script>
+let current=1;
+function validate(){
+ const p=document.querySelector('.page[data-page="'+current+'"]');
+ let ok=true;
+ p.querySelectorAll('[required]').forEach(x=>{if(!x.value.trim()){x.style.borderColor='#ff5964';ok=false}else{x.style.borderColor=''}});
+ if(!ok) alert('Completa los campos obligatorios antes de continuar.');
+ return ok;
+}
+function show(n){
+ document.querySelectorAll('.page[data-page]').forEach(x=>x.classList.toggle('active',+x.dataset.page===n));
+ document.querySelectorAll('.dot').forEach((x,i)=>x.classList.toggle('active',i<n));
+ current=n; scrollTo({top:0,behavior:'smooth'});
+}
+function next(){if(validate()&&current<8)show(current+1)}
+function prev(){if(current>1)show(current-1)}
+function finish(){
+ if(!validate())return;
+ if(!document.getElementById('confirm').checked){alert('Debes confirmar que has respondido con tus propias palabras.');return}
+ document.getElementById('form').style.display='none';document.getElementById('progress').style.display='none';document.getElementById('success').classList.add('active');scrollTo(0,0);
+}
+</script>
+</body>
+</html>
