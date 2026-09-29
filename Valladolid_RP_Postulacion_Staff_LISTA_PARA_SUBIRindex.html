@@ -1,4 +1,177 @@
-<!doctype html><!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postulaciones Staff - Valladolid RP</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0f0f13;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #1a1a24;
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      border: 1px solid #2d2d3f;
+    }
+
+    h1 {
+      text-align: center;
+      color: #7289da;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #aaaaaa;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .warning-box {
+      background-color: rgba(255, 68, 68, 0.15);
+      border-left: 5px solid #ff4444;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    .warning-box p {
+      color: #ff6b6b;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #dddddd;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: #0f0f13;
+      border: 1px solid #3a3a50;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+      border-color: #7289da;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: #5865f2;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #4752c4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Postulaciones Staff — Valladolid RP</h1>
+    <p class="subtitle">Completa el formulario para postularte al equipo de administración.</p>
+
+    <div class="warning-box">
+      <p>⚠️ PROHIBIDO USAR INTELIGENCIA ARTIFICIAL (IA)</p>
+      <p style="font-weight: normal; margin-top: 5px; color: #e0e0e0;">
+        El uso de ChatGPT o cualquier otra IA para responder las preguntas provocará el <strong>rechazo inmediato de la postulación</strong>. Responde con tus propias palabras.
+      </p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="discord">1. Nombre de usuario en Discord (ej: usuario#0000 o @usuario):</label>
+        <input type="text" id="discord" placeholder="Tu usuario de Discord" required>
+      </div>
+
+      <div class="form-group">
+        <label for="edad">2. ¿Cuántos años tienes?:</label>
+        <input type="number" id="edad" min="12" max="99" placeholder="Tu edad real" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tiempo">3. ¿Cuánto tiempo llevas jugando en Valladolid RP?:</label>
+        <input type="text" id="tiempo" placeholder="Ej: 3 meses, 1 año..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="experiencia">4. ¿Tienes experiencia previa siendo Staff en otros servidores de RP?:</label>
+        <textarea id="experiencia" placeholder="Cuéntanos qué cargos has tenido y en qué servidores..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="disponibilidad">5. ¿Cuántas horas al día puedes dedicar al servidor?:</label>
+        <input type="text" id="disponibilidad" placeholder="Ej: 3 a 4 horas por las tardes" required>
+      </div>
+
+      <div class="form-group">
+        <label for="motivo">6. ¿Por qué quieres ser parte del Staff de Valladolid RP?:</label>
+        <textarea id="motivo" placeholder="Explica tus motivos principales..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="situacion">7. ¿Qué harías si ves a un jugador rompiendo la normativa y no hay más Staff conectado?:</label>
+        <textarea id="situacion" placeholder="Explica cómo actuarías paso a paso..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Postulación</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8">
